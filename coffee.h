@@ -3,9 +3,9 @@
 
 #include <pthread.h>
 
-#define BEANS_PER_CUP 1
+#define BEANS_PER_CUP 3
 #define CAPACITY 10
-#define MAX_REFILLS 3
+#define MAX_REFILLS 10
 
 typedef struct {
   int beans;
@@ -20,5 +20,11 @@ void destroy_grinder(coffee_grinder *g);
 
 void *manager_A(void *arg);
 void *barista_A(void *arg);
+
+void *manager_B(void *arg);
+void *barista_B(void *arg);
+
+void *manager_C(void *arg);
+void *barista_C(void *arg);
 
 #endif
